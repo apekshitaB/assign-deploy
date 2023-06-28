@@ -1,0 +1,73 @@
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+     
+    </button>
+    <span>Registration Application</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+     
+    </button>
+    
+      <button mat-raised-button color="warn" (click)="openDialog()">Register</button>
+
+  </mat-toolbar>
+</p>
+
+<div class="contianer">
+  <div style="margin-top: 10px;">
+    
+    
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort>
+    
+       
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+          <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+        </ng-container>
+    
+      
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> DOB </th>
+          <td mat-cell *matCellDef="let row"> {{row.date | date}}% </td>
+        </ng-container>
+    
+       
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Email Id </th>
+          <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+        </ng-container>
+    
+       
+        <ng-container matColumnDef="gender">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Gender </th>
+          <td mat-cell *matCellDef="let row"> {{row.gender}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="mobileno">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile No </th>
+          <td mat-cell *matCellDef="let row"> {{row.mobileno}} </td>
+        </ng-container>
+    
+
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+          <td mat-cell *matCellDef="let row"> 
+          <button mat-icon-button (click)="editProduct(row)"color="primary">
+            <mat-icon>edit</mat-icon>
+          </button>  
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+        
+      </table>
+    
+      
+    </div>
+    
+    
+  </div>
+</div>

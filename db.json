@@ -1,0 +1,22 @@
+{
+  "regData": [
+    {
+      "name": "Record 1",
+      "date": "2023-06-14T18:30:00.000Z",
+      "email": "record1@gmail.com",
+      "gender": "Female",
+      "mobileno": "345365547",
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
